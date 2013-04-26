@@ -47,7 +47,7 @@ VERBOSE=1
 #CURL_BIN="/usr/bin/curl"
 
 #Temporary folder
-TMP_DIR="/tmp"
+TMP_DIR="./.tmp"
 
 #Don't edit these...
 API_REQUEST_TOKEN_URL="https://api.dropbox.com/1/oauth/request_token"
@@ -68,7 +68,10 @@ CHUNK_FILE="$TMP_DIR/du_chunk_$RANDOM"
 BIN_DEPS="sed basename date grep stat dd printf"
 VERSION="0.11.7"
 
-umask 0777
+#umask 0777
+
+#try mkdir .tmp , suppress error
+mkdir "$TMP_DIR" >/dev/null 2>&1
 
 #Check the shell
 if [ -z "$BASH_VERSION" ]; then
