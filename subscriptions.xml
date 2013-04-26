@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>Example subscriptions.xml (for testing purposes only)</title>
+    </head>
+    <body>
+        <outline title="Fun" text="Fun">
+            <outline text="爱枣报" title="爱枣报" type="rss"
+                xmlUrl="http://www.izaobao.us/index.php/feed/" htmlUrl="http://www.izaobao.us"/>
+        </outline>
+       
+        <outline title="IT" text="IT">
+            <outline text="cnBeta.COM" title="cnBeta.COM" type="rss"
+                xmlUrl="http://www.cnbeta.com/backend.php" htmlUrl="http://www.cnbeta.com"/>
+            <outline text="Solidot" title="Solidot" type="rss"
+                xmlUrl="http://solidot.org.feedsportal.com/c/33236/f/556826/index.rss" htmlUrl="http://www.solidot.org"/>
+            <outline text="互联网的那点事" title="互联网的那点事" type="rss"
+                xmlUrl="http://www.alibuybuy.com/feed" htmlUrl="http://www.alibuybuy.com"/>
+        </outline>
+        <outline title="Blog" text="Blog">
+            <outline text="phoeagon啲01世界" title="phoeagon啲01世界"
+                type="rss"
+                xmlUrl="http://blog.qooza.hk/rss.php?user=phoeagon" htmlUrl="http://blog.qooza.hk/phoeagon"/>
+        </outline>
+        <outline title="ACG" text="ACG">
+            <outline text="和邪社" title="和邪社" type="rss"
+                xmlUrl="http://www.hexieshe.com/feed" htmlUrl="http://www.hexieshe.com"/>
+        </outline>
+    </body>
+</opml>
