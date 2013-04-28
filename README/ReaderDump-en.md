@@ -1,16 +1,27 @@
 Reader Dump -- 一個Google Reader導出工具以及 Reader琥珀計劃
 ===========================
-
+**Reader Dump -- a Google Reader exporter, exporting all feeds subscribed.**
 phoeagon
 
 *Apr 25, 2013*
 
 *English Version of this doc is not yet ready*.
 
-## 簡介
+## 簡介(Intro)
 Reader Dump是一個用與從Google Reader中導出現有所有已訂閱feed的文章的工具
 
-###Reader琥珀計劃
+Reader Dump is a Google Reader exporter that exports all feeds subscribed by
+a particular account. It is known that although Google provides an "export" function
+via Takeout, it merely exports *RSS URLs* and *stared-items*.
+
+###Reader琥珀計劃(Reader Amber Project)
+Reader Amber Project aims at exporting and storing contents previously stored
+in Google Reader, especially those from sites currently unavailable.
+
+By default, this utility uploads your exported feeds to our sharing folder. If
+ you don't want to share such information, either delete the uploader script,
+ or terminate the upload process.
+
 衆所周知，在Google Reader上存檔了許多網站既有的RSS發佈內容。**其中某些頁面，某些網站可能
 已經因爲技術原因或者非技術原因被刪除、關閉，而Google Reader保存了既有的內容。**事實上，Google
 Reader保存了第一個帳號在reader上開始訂閱該訂閱點（feed）開始的所有內容（假設沒有刪過？）。此後
@@ -35,7 +46,7 @@ Feed導出的歸檔。這個歸檔類似與博物館性質，把Reader上曾經�
 >>####我願意協助維護本計劃
 >>謝謝。請通過郵件聯繫作者。
 
-### Reader Dump的開源許可證
+### Reader Dump的開源許可證(Licensing -- Apache License)
 
        Copyright 2013
 
@@ -51,27 +62,40 @@ Feed導出的歸檔。這個歸檔類似與博物館性質，把Reader上曾經�
        See the License for the specific language governing permissions and
        limitations under the License.
 
-## 安裝
-###環境要求
+## 安裝 Installation
+###環境要求 Environment
 本工具在Ubuntu 12.04+curl 7.22.0+Python 2+下測試通過。
 
-組建要求：
+This utility has been tested on **Ubuntu 12.04+curl 7.22.0+Python 2**.
+
+#### 組建要求：(Requirements)
+
 + Linux作業環境
 + bash命令解釋器（絕大多數linux發行版默認的shell）
 + curl
 + Python
 
-###Ubuntu下安裝上述依賴包
 
-開啓terminal控制檯，輸入sudo apt-get install curl python。根據提示完成安裝操作。
+###Ubuntu下安裝上述依賴包 Installing these dependencies on Ubuntu
 
-###本工具本身安裝使用
+開啓terminal控制檯，輸入`sudo apt-get install curl python`。根據提示完成安裝操作。
+
+Open a terminal, invoke `sudo apt-get install curl python`. Then do
+as you would be prompted on the screen.
+
+###本工具本身安裝使用 Deployment
 
 解壓到linux文件系統（NTFS/FAT系列不支持linux下的權限標誌可執行位）。
 
-## 使用
+Extract to a linux filesystem (ext3, ext4, etc). NTFS/FAT unsupported due
+to their lack of *execution bit*.
+
+## 使用 How To Use
 
 ###生成Cookies.txt文件
+
+ Generate a `cookies.txt` file
+
 對Firefox用戶，請安裝[Export Cookies](https://addons.mozilla.org/en-us/firefox/addon/export-cookies)插件。對於Chrome用戶，請安裝[Cookies.txt Export](https://chrome.google.com/webstore/detail/cookietxt-export/lopabhfecdfhgogdbojmaicoicjekelh?hl=en)插件。
 
 請在瀏覽器上登錄Google Reader後，根據插件的指示，導出cookies.txt文件。
@@ -80,23 +104,31 @@ Feed導出的歸檔。這個歸檔類似與博物館性質，把Reader上曾經�
 
 ###從Google Reader導出訂閱的feed的地址
 
+Export your feeds from Google Reader
+
 從Google Takeout下載到一個壓縮包文件(*youraccount*`@gmail.com-takeout.zip`)，解出裏面的subscriptions.xml到程序目錄。
 
 ###執行程序
+
+Executing the utility.
+
 打開terminal。定位到程序文件夾。運行./python reader_dump.py subscriptions.xml
 
 你的feed會自動下載到下面的data文件夾中。對於cnBeta等很長的feed可能需要很長一段時間。你不需要理會這個控制檯，甚至可以關閉控制檯，所有的下載工作會在後臺完成（但若關閉控制檯，將無法直接查看下載進程）
 
 ### 請支持我們，將你拉取下載的文件送給我們。
+
+Please support our Amber Project by uploading your exported items.
+
 默認腳本會將下載的文件上傳到本計劃的Dropbox文件夾。如果涉及隱私內容，請中斷Dropbox上傳程序(./dropbox_uploader.sh)
 
-### 特殊使用說明
-#### 代理設置
+### 特殊使用說明 Extra Notes
+#### 代理設置 Proxy Settings
 打開new.sh文件，找到Proxy setting對應的註釋，裏面提供了幾個模板。
 
 關閉代理服務器，請去掉PROXY=""前的#。需要激活服務器，請編輯形如PROXY="http://127.0.0.1:8087/"一行，去掉#，並修改端口和IP。
 
-#### HTTPS證書問題
+#### HTTPS證書問題 HTTPS Certification
 本工具默認啓用證書驗證的SSL連接Google Reader服務器。
 強制關閉證書檢測，請將下面對應設置配置：
 
