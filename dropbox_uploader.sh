@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 #
-#       This file has been adapted for the Reader Dump project
+#       This file has been adapted for the Reader Dump project.
+#
+#   this file has been adapted by phoeagon for the Reader Dump Project
+#   and is distributed under GPL license ( different from the main part
+#   of Reader Dump which is distributed under Apache ).
 #
 ##################################################################
 #

@@ -49,6 +49,15 @@ Feed導出的歸檔。這個歸檔類似與博物館性質，把Reader上曾經�
        See the License for the specific language governing permissions and
        limitations under the License.
 
+       This package contains a script distributed under GPL.
+       dropbox_uploader is invoked by commandline in this package. dropbox_uploader
+       is an open source project by Andrea Fabrizi <andrea.fabrizi@gmail.com>.
+       The script has been adapted and is released under GPL. We believe such
+       should be interpreted as an ["aggregate"]       (http://www.gnu.org/licenses/gpl-faq.html#MereAggregation)
+       and therefore the project itself,
+       which could run independently without this uploader, could be distributed
+       under Apache.
+
 ## 安裝
 ###環境要求
 本工具在Ubuntu 12.04+curl 7.22.0+Python 2+下測試通過。
