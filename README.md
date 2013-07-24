@@ -44,6 +44,8 @@ Feed導出的歸檔。這個歸檔類似與博物館性質，把Reader上曾經�
 
             bash dropbox_uploader.sh subscriptions.xml Public/`md5sum subscriptions.xml`_subscriptions.xml
 
+**Dropbox登錄憑證已撤銷。先仍可以訪問上面的網址獲取存檔內容**
+
 >>####我願意協助維護本計劃
 >>謝謝。請通過郵件聯繫作者。
 
