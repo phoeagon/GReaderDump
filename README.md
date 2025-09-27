@@ -6,7 +6,7 @@ phoeagon
 
 *Apr 25, 2013*
 
-*English Version of this doc is not yet ready*.
+*English Version of this doc is [here](https://github.com/phoeagon/GReaderDump/blob/master/README.EN.md)*
 
 ## 簡介(Intro)
 Reader Dump是一個用與從Google Reader中導出現有所有已訂閱feed的文章的工具
